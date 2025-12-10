@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFC700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+    </linearGradient>
+    <filter id="goldenGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.6" flood-color="#8B6F47"/>
+    </filter>
+  </defs>
+  
+  <!-- Background glow -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#goldGradient)" stroke-width="2" opacity="0.3" filter="url(#goldenGlow)"/>
+  
+  <!-- Top bar of F -->
+  <path d="M 80 80 L 280 80 Q 300 80 310 100 L 310 140 Q 300 150 280 150 L 120 150 L 120 80" 
+        fill="url(#goldGradient)" filter="url(#shadow)" opacity="0.95"/>
+  
+  <!-- Middle bar of F -->
+  <path d="M 90 170 L 270 170 Q 285 170 295 185 L 295 215 Q 285 225 270 225 L 120 225 L 120 170" 
+        fill="url(#goldGradient)" filter="url(#shadow)" opacity="0.9"/>
+  
+  <!-- Vertical stroke of F -->
+  <rect x="80" y="80" width="50" height="280" rx="8" fill="url(#goldGradient)" filter="url(#shadow)" opacity="0.95"/>
+  
+  <!-- Bottom accent -->
+  <ellipse cx="200" cy="340" rx="80" ry="30" fill="#B8861E" filter="url(#shadow)" opacity="0.6"/>
+  
+  <!-- Highlight lines -->
+  <path d="M 90 85 L 85 95" stroke="#FFEB3B" stroke-width="3" stroke-linecap="round" opacity="0.6" filter="url(#goldenGlow)"/>
+  <path d="M 100 175 L 95 190" stroke="#FFEB3B" stroke-width="2.5" stroke-linecap="round" opacity="0.5" filter="url(#goldenGlow)"/>
+</svg>
